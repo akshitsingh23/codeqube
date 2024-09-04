@@ -1,12 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
-import BrowserRouter from 'react-router-dom';
-import Landing from './components/about/about';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import About from './components/about/about.jsx';
+
 function App() {
   return (
-    <div className='bg-black '>
-      <Landing />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<About />} />
+      </Routes>
+    </Router>
   );
 }
 
